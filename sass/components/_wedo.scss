@@ -1,0 +1,39 @@
+.wedo__title,
+.team__title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.wedo__item--container {
+  position: relative;
+}
+
+.item__container--text {
+  position: absolute;
+  bottom: 0;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--footer-color-text-secondary);
+  background: rgba(47, 48, 58, 0.8);
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wedo__list {
+  display: flex;
+  gap: 30px;
+}
+
+.wedo__item {
+  list-style-type: none;
+  position: relative;
+}
+
+.wedo {
+  padding-bottom: 94px;
+}
