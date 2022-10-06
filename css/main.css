@@ -936,10 +936,6 @@ body {
   background-color: var(--text-color-accent);
 }
 
-.card__link-icon-footer + .card__link-icon-footer {
-  padding-left: 10px;
-}
-
 .footer__wrapper .form-subscription {
   text-align: center;
 }
