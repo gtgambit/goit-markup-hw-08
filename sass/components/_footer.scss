@@ -10,7 +10,7 @@
   align-items: center;
 
   @media screen and (min-width: 768px) {
-    display: block;
+    display: flex;
     padding-left: 76px;
     padding-right: 89px;
   }
@@ -24,12 +24,17 @@
     align-items: baseline;
   }
 }
+
 .footer-sub__wrap {
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .footer__list {
   text-align: center;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     text-align: left;
   }
 }
@@ -42,10 +47,6 @@
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  margin-left: 46px;
-  @media screen and (min-width: 768px) {
-    margin-left: 0;
-  }
 }
 
 .logo__footer {

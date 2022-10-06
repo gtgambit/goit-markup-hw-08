@@ -1,10 +1,10 @@
 .hero {
   background-color: var(--footer-bg-color);
   text-align: center;
-  padding: 200px 0;
+  padding: 118px 0;
   margin: 0 auto;
   max-width: 1600px;
-  height: 600px;
+  height: 400px;
 
   background-image: linear-gradient(
       to right,
@@ -73,11 +73,11 @@
 }
 
 .hero__title {
-  max-width: 696px;
+  max-width: 300px;
   margin: 0 auto 30px;
 
   font-weight: 900;
-  font-size: 44px;
+  font-size: 26px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
@@ -86,6 +86,7 @@
 
   @media screen and (min-width: 1200px) {
     font-size: 44px;
+    max-width: 696px;
     line-height: calc(60 / 44);
   }
 }
