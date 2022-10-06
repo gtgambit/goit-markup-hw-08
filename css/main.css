@@ -355,7 +355,7 @@ body {
 .contacts__link {
   color: var(--text-color-secondary);
   display: flex;
-  align-items: center;
+  align-items: left;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -469,6 +469,11 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--footer-color-text-secondary);
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    max-width: 360px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {

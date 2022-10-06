@@ -22,7 +22,7 @@
 .contacts__link {
   color: var(--text-color-secondary);
   display: flex;
-  align-items: center;
+  align-items: left;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
