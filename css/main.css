@@ -316,11 +316,10 @@ body {
 .header-socials__item {
   padding-right: 10px;
   margin-right: 10px;
-  border-right: 1px solid #000;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
-.header-socials__item:nth-child(n+2) {
-  padding-left: 10px;
-  border-left: solid rgba(33, 33, 33, 0.2);
+.header-socials__item:last-child {
+  border-right: none;
 }
 
 .header-socials__link {
@@ -470,7 +469,7 @@ body {
   text-transform: uppercase;
   color: var(--footer-color-text-secondary);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .hero__title {
     max-width: 360px;
   }
