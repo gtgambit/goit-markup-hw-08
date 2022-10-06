@@ -4,7 +4,24 @@
 }
 .footer__wrapper {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    padding-left: 76px;
+    padding-right: 89px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 
 .logo-bsmt {
@@ -34,6 +51,13 @@
 
 .adds {
   color: var(--footer-color-text-secondary);
+  margin-bottom: 60px;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    text-align: start;
+  }
 }
 
 .bsmt-item {
@@ -56,7 +80,7 @@
   margin-bottom: 9px;
 }
 
-.footer__social p {
+.footer-socials__title {
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -64,21 +88,25 @@
   line-height: 16px;
   letter-spacing: 1, 14;
   text-transform: uppercase;
+  text-align: center;
   color: var(--footer-color-text-secondary);
-}
+  letter-spacing: 0.03em;
 
-.footer__social {
-  margin-left: 70px;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 
 .card__links-list-footer {
   display: flex;
-  flex-wrap: nowrap;
+  gap: 10px;
 }
+
 .card__link-footer {
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 44px;
   height: 44px;
   border-radius: 50%;

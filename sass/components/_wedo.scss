@@ -1,5 +1,4 @@
-.wedo__title,
-.team__title {
+.wedo__title {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -36,4 +35,8 @@
 
 .wedo {
   padding-bottom: 94px;
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 }

@@ -19,40 +19,78 @@
   </head>
   <body>
     <!-- header -->
-    <header class="page-header">
+    <header class="header">
       <div class="container navigation">
         <a href="./index.html" class="logo"
           >Web<span class="header__logo">Studio</span></a
         >
-        <nav class="page__nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="./index.html" class="nav__link--link active">Студія</a>
+        <button
+          class="mobile-menu__button"
+          aria-expanded="false"
+          data-menu-button
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="mobile-menu__icon"
+            aria-label="Перемикач мобільного меню"
+            width="40"
+            height="40"
+          >
+            <use
+              class="mobile-menu__close"
+              href="./images/icon.svg#icon-close-menu-mobile"
+            ></use>
+            <use
+              class="mobile-menu__open"
+              href="./images/icon.svg#icon-menu-mobile"
+            ></use>
+          </svg>
+        </button>
+        <div class="mobile-menu" id="mobile-menu">
+          <nav class="page__nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link--link active">Студія</a>
+              </li>
+              <li class="nav__item">
+                <a href="./portfolio.html" class="nav__link--link">Портфоліо</a>
+              </li>
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link--link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <a href="mailto:info@devstudio.com" class="contacts__link">
+                <svg class="icon-header email">
+                  <use href="./images/icon.svg#icon-envelope"></use></svg
+                >info@devstudio.com</a
+              >
             </li>
-            <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link--link">Портфоліо</a>
-            </li>
-            <li class="nav__item">
-              <a href="./index.html" class="nav__link--link">Контакти</a>
+            <li class="contacts__item">
+              <a href="tel:++380961111111" class="contacts__link"
+                ><svg class="icon-header phone">
+                  <use href="./images/icon.svg#icon-smartphone"></use></svg
+                >+38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="contacts__list">
-          <li class="contacts__item">
-            <a href="mailto:info@devstudio.com" class="contacts__link">
-              <svg class="icon-header email">
-                <use href="./images/icon.svg#icon-envelope"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a href="tel:++380961111111" class="contacts__link"
-              ><svg class="icon-header phone">
-                <use href="./images/icon.svg#icon-smartphone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="header-socials">
+            <li class="header-socials__item">
+              <a href="#" class="header-socials__link">Instagram</a>
+            </li>
+            <li class="header-socials__item">
+              <a href="#" class="header-socials__link">Twitter</a>
+            </li>
+            <li class="header-socials__item">
+              <a href="#" class="header-socials__link">Facebook</a>
+            </li>
+            <li class="header-socials__item">
+              <a href="#" class="header-socials__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -126,10 +164,11 @@
             <li class="wedo__item">
               <div class="wedo__item--container">
                 <img
-                  src="./images/wedo/01.jpg"
-                  alt="набор тексту"
-                  height="294"
+                  srcset="./images/wwd.jpg 1x, ./images/wwd@2x.jpg 2x"
+                  src="./images/wwd.jpg"
+                  alt="пишемо код"
                   width="370"
+                  class="what-we-do__image"
                 />
                 <p class="item__container--text">Десктопні додатки</p>
               </div>
@@ -137,10 +176,11 @@
             <li class="wedo__item">
               <div class="wedo__item--container">
                 <img
-                  src="./images/wedo/02.jpg"
-                  alt="смартфон в руці"
-                  height="294"
+                  srcset="./images/wwd-1.jpg 1x, ./images/wwd@2x-1.jpg 2x"
+                  src="./images/wwd-1.jpg"
+                  alt="розробка"
                   width="370"
+                  class="what-we-do__image"
                 />
                 <p class="item__container--text">Мобільні додатки</p>
               </div>
@@ -148,10 +188,11 @@
             <li class="wedo__item">
               <div class="wedo__item--container">
                 <img
-                  src="./images/wedo/03.jpg"
-                  alt="планшет"
-                  height="294"
+                  srcset="./images/wwd-2.jpg 1x, ./images/wwd@2x-2.jpg 2x"
+                  src="./images/wwd-2.jpg"
+                  alt="Оформлення"
                   width="370"
+                  class="what-we-do__image"
                 />
                 <p class="item__container--text">Дизайнерські рішення</p>
               </div>
@@ -165,7 +206,17 @@
           <ul class="team__list">
             <li class="team__item">
               <img
-                src="./images/team/01.jpg"
+                class="team__photo"
+                srcset="
+                  ./images/member-mobile.jpg     450w,
+                  ./images/member-mobile@2x.jpg  900w,
+                  ./images/member-tablet.jpg     354w,
+                  ./images/member-tablet@2x.jpg  708w,
+                  ./images/member-desktop.jpg    270w,
+                  ./images/member-desktop@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                src="./images/member-mobile.jpg"
                 alt="фото дизайнера"
                 height="260"
                 width="270"
@@ -207,7 +258,17 @@
             </li>
             <li class="team__item">
               <img
-                src="./images/team/02.jpg"
+                class="team__photo"
+                srcset="
+                  ./images/member-1-mobile.jpg     450w,
+                  ./images/member-1-mobile@2x.jpg  900w,
+                  ./images/member-1-tablet.jpg     354w,
+                  ./images/member-1-tablet@2x.jpg  708w,
+                  ./images/member-1-desktop.jpg    270w,
+                  ./images/member-1-desktop@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                src="./images/member-1-mobile.jpg"
                 alt="фото розробника"
                 height="260"
                 width="270"
@@ -249,7 +310,17 @@
             </li>
             <li class="team__item">
               <img
-                src="./images/team/03.jpg"
+                class="team__photo"
+                srcset="
+                  ./images/member-2-mobile.jpg     450w,
+                  ./images/member-2-mobile@2x.jpg  900w,
+                  ./images/member-2-tablet.jpg     354w,
+                  ./images/member-2-tablet@2x.jpg  708w,
+                  ./images/member-2-desktop.jpg    270w,
+                  ./images/member-2-desktop@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                src="./images/member-2-mobile.jpg"
                 alt="фото працівника маркетингу"
                 height="260"
                 width="270"
@@ -291,7 +362,17 @@
             </li>
             <li class="team__item">
               <img
-                src="./images/team/04.jpg"
+                class="team__photo"
+                srcset="
+                  ./images/member-3-mobile.jpg     450w,
+                  ./images/member-3-mobile@2x.jpg  900w,
+                  ./images/member-3-tablet.jpg     354w,
+                  ./images/member-3-tablet@2x.jpg  708w,
+                  ./images/member-3-desktop.jpg    270w,
+                  ./images/member-3-desktop@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px"
+                src="./images/member-3-mobile.jpg"
                 alt="фото дизайнера"
                 height="260"
                 width="270"
@@ -335,7 +416,7 @@
         </div>
       </section>
       <!---------Regual Customers-->
-      <section class="clients-section">
+      <section class="clients">
         <div class="container">
           <h2 class="clients__title">Постійні клієнти</h2>
           <ul class="clients__list">
@@ -388,7 +469,7 @@
     <footer class="page-footer">
       <div class="container">
         <div class="footer__wrapper">
-          <div>
+          <div class="footer-sub__wrap">
             <a href="./index.html" class="logo-bsmt"
               >Web<span class="logo__footer">Studio</span></a
             >
@@ -416,7 +497,7 @@
             </address>
           </div>
           <div class="footer__social">
-            <p>Приєднуйтесь</p>
+            <p class="footer-socials__title">Приєднуйтесь</p>
             <ul class="card__links-list-footer">
               <li class="card__link-icon-footer">
                 <a href="#" class="card__link-footer">
@@ -525,8 +606,10 @@
               <svg class="icon-checkin">
                 <use href="./images/icon.svg#icon-checkin"></use>
               </svg>
-              <span>Погоджуюся з розсилкою та приймаю&nbsp;</span>
-              <a class="contract-link" href="#">Умови договору</a>
+              <div class="contract-link__wrapper">
+                <span>Погоджуюся з розсилкою та приймаю&nbsp;</span>
+                <a class="contract-link" href="#">Умови договору</a>
+              </div>
             </label>
             <button class="submit-btn" type="submit">Відправити</button>
           </form>
@@ -534,5 +617,12 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

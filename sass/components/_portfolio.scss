@@ -1,3 +1,13 @@
+.gallery {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .gallery__btns {
   display: flex;
   margin-bottom: 50px;
@@ -35,18 +45,27 @@
   min-width: 26px;
   letter-spacing: 0.03em;
 }
-.gallery {
-  padding: 94px 0;
-}
-.cards__item {
-  position: relative;
-}
-
 .gallery__cards {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
+
+.cards__item {
+  flex-basis: 100%;
+  max-width: 450px;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 30px) / 2);
+    max-width: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 60px) / 3);
+    max-width: 370px;
+  }
+}
+
 .cards__link {
   display: block;
   position: relative;
@@ -57,6 +76,11 @@
   &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 }
 
@@ -76,10 +100,18 @@
   overflow: hidden;
 }
 
-.cards__wrapper__container {
+.cards-wrapper__container {
   position: absolute;
-}
+  @media screen and (min-width: 768px) {
+    padding-top: 49px;
+    padding-bottom: 77px;
+  }
 
+  @media screen and (min-width: 1200px) {
+    padding-top: 63px;
+    padding-bottom: 63px;
+  }
+}
 .cards__info {
   color: #ffff;
   font-size: 18px;
@@ -94,10 +126,18 @@
 }
 
 .cards__desciption {
+  display: flex;
+  flex-direction: column;
+
   padding: 20px 24px;
+
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    flex-grow: 1;
+  }
 }
 
 .desciption__title {
@@ -111,4 +151,5 @@
   font-size: 16px;
   line-height: 1.88;
   color: var(--text-color-secondary);
+  letter-spacing: 0.03em;
 }

@@ -19,42 +19,80 @@
   </head>
   <body>
     <!-- header -->
-    <header class="page-header">
+    <header class="header">
       <div class="container navigation">
         <a href="./index.html" class="logo"
           >Web<span class="header__logo">Studio</span></a
         >
-        <nav class="page__nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="./index.html" class="nav__link--link">Студія</a>
-            </li>
-            <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link--link active"
-                >Портфоліо</a
+        <button
+          class="mobile-menu__button"
+          aria-expanded="false"
+          data-menu-button
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="mobile-menu__icon"
+            aria-label="Перемикач мобільного меню"
+            width="40"
+            height="40"
+          >
+            <use
+              class="mobile-menu__close"
+              href="./images/icon.svg#icon-close-menu-mobile"
+            ></use>
+            <use
+              class="mobile-menu__open"
+              href="./images/icon.svg#icon-menu-mobile"
+            ></use>
+          </svg>
+        </button>
+        <div class="mobile-menu" id="mobile-menu">
+          <nav class="page__nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link--link">Студія</a>
+              </li>
+              <li class="nav__item">
+                <a href="./portfolio.html" class="nav__link--link active"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="./index.html" class="nav__link--link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <a href="mailto:info@devstudio.com" class="contacts__link">
+                <svg class="icon-header email">
+                  <use href="./images/icon.svg#icon-envelope"></use></svg
+                >info@devstudio.com</a
               >
             </li>
-            <li class="nav__item">
-              <a href="./index.html" class="nav__link--link">Контакти</a>
+            <li class="contacts__item">
+              <a href="tel:++380961111111" class="contacts__link"
+                ><svg class="icon-header phone">
+                  <use href="./images/icon.svg#icon-smartphone"></use></svg
+                >+38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="contacts__list">
-          <li class="contacts__item">
-            <a href="mailto:info@devstudio.com" class="contacts__link">
-              <svg class="icon-header email">
-                <use href="./images/icon.svg#icon-envelope"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a href="tel:++380961111111" class="contacts__link"
-              ><svg class="icon-header phone">
-                <use href="./images/icon.svg#icon-smartphone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="header-socials">
+            <li class="header-socials__item">
+              <a href="#" class="header-socials__link">Instagram</a>
+            </li>
+            <li class="header-socials__item">
+              <a href="#" class="header-socials__link">Twitter</a>
+            </li>
+            <li class="header-socials__item">
+              <a href="#" class="header-socials__link">Facebook</a>
+            </li>
+            <li class="header-socials__item">
+              <a href="#" class="header-socials__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -81,12 +119,21 @@
               <a href="" class="cards__link">
                 <div class="cards__wrapper">
                   <img
-                    src="./images/portfolio/01.jpg"
+                    srcset="
+                      ./images/project-mobile.jpg     450w,
+                      ./images/project-mobile@2x.jpg  900w,
+                      ./images/project-tablet.jpg     354w,
+                      ./images/project-tablet@2x.jpg  708w,
+                      ./images/project-desktop.jpg    370w,
+                      ./images/project-desktop@2x.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px,(max-width: 424px) 354px, 100vw"
+                    src="./images/project-mobile.jpg"
                     alt="Технокряк"
                     width="370"
                   />
 
-                  <div class="cards__wrapper__container">
+                  <div class="cards-wrapper__container">
                     <p class="cards__info">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
@@ -105,12 +152,21 @@
               <a href="" class="cards__link">
                 <div class="cards__wrapper">
                   <img
-                    src="./images/portfolio/02.jpg"
+                    srcset="
+                      ./images/project-1-mobile.jpg     450w,
+                      ./images/project-1-mobile@2x.jpg  900w,
+                      ./images/project-1-tablet.jpg     354w,
+                      ./images/project-1-tablet@2x.jpg  708w,
+                      ./images/project-1-desktop.jpg    370w,
+                      ./images/project-1-desktop@2x.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px,(max-width: 424px) 354px, 100vw"
+                    src="./images/project-1-mobile.jpg"
                     alt="Постер New Orlean vs Golden Star"
                     width="370"
                   />
 
-                  <div class="cards__wrapper__container">
+                  <div class="cards-wrapper__container">
                     <p class="cards__info">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
@@ -131,12 +187,21 @@
               <a href="" class="cards__link">
                 <div class="cards__wrapper">
                   <img
-                    src="./images/portfolio/03.jpg"
+                    srcset="
+                      ./images/project-2-mobile.jpg     450w,
+                      ./images/project-2-mobile@2x.jpg  900w,
+                      ./images/project-2-tablet.jpg     354w,
+                      ./images/project-2-tablet@2x.jpg  708w,
+                      ./images/project-2-desktop.jpg    370w,
+                      ./images/project-2-desktop@2x.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px, (max-width: 424px) 354px, 100vw"
+                    src="./images/project-2-mobile.jpg"
                     alt="Ресторан Seafood"
                     width="370"
                   />
 
-                  <div class="cards__wrapper__container">
+                  <div class="cards-wrapper__container">
                     <p class="cards__info">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
@@ -155,12 +220,21 @@
               <a href="" class="cards__link">
                 <div class="cards__wrapper">
                   <img
-                    src="./images/portfolio/04.jpg"
+                    srcset="
+                      ./images/project-3-mobile.jpg     450w,
+                      ./images/project-3-mobile@2x.jpg  900w,
+                      ./images/project-3-tablet.jpg     354w,
+                      ./images/project-3-tablet@2x.jpg  708w,
+                      ./images/project-3-desktop.jpg    370w,
+                      ./images/project-3-desktop@2x.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px,(max-width: 424px) 354px, 100vw"
+                    src="./images/project-3-mobile.jpg"
                     alt="Проєкт Prime"
                     width="370"
                   />
 
-                  <div class="cards__wrapper__container">
+                  <div class="cards-wrapper__container">
                     <p class="cards__info">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
@@ -179,12 +253,21 @@
               <a href="" class="cards__link">
                 <div class="cards__wrapper">
                   <img
-                    src="./images/portfolio/05.jpg"
+                    srcset="
+                      ./images/project-4-mobile.jpg     450w,
+                      ./images/project-4-mobile@2x.jpg  900w,
+                      ./images/project-4-tablet.jpg     354w,
+                      ./images/project-4-tablet@2x.jpg  708w,
+                      ./images/project-4-desktop.jpg    370w,
+                      ./images/project-4-desktop@2x.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px,(max-width: 424px) 354px, 100vw"
+                    src="./images/project-4-mobile.jpg"
                     alt="Проєкт Boxes"
                     width="370"
                   />
 
-                  <div class="cards__wrapper__container">
+                  <div class="cards-wrapper__container">
                     <p class="cards__info">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
@@ -203,12 +286,21 @@
               <a href="" class="cards__link">
                 <div class="cards__wrapper">
                   <img
-                    src="./images/portfolio/06.jpg"
+                    srcset="
+                      ./images/project-5-mobile.jpg     450w,
+                      ./images/project-5-mobile@2x.jpg  900w,
+                      ./images/project-5-tablet.jpg     354w,
+                      ./images/project-5-tablet@2x.jpg  708w,
+                      ./images/project-5-desktop.jpg    370w,
+                      ./images/project-5-desktop@2x.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px,(max-width: 424px) 354px, 100vw"
+                    src="./images/project-5-mobile.jpg"
                     alt="Inspiration has no Borders"
                     width="370"
                   />
 
-                  <div class="cards__wrapper__container">
+                  <div class="cards-wrapper__container">
                     <p class="cards__info">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
@@ -227,12 +319,21 @@
               <a href="" class="cards__link">
                 <div class="cards__wrapper">
                   <img
-                    src="./images/portfolio/07.jpg"
+                    srcset="
+                      ./images/project-6-mobile.jpg     450w,
+                      ./images/project-6-mobile@2x.jpg  900w,
+                      ./images/project-6-tablet.jpg     354w,
+                      ./images/project-6-tablet@2x.jpg  708w,
+                      ./images/project-6-desktop.jpg    370w,
+                      ./images/project-6-desktop@2x.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px,(max-width: 424px) 354px, 100vw"
+                    src="./images/project-6-mobile.jpg"
                     alt="Видання Limited Edition"
                     width="370"
                   />
 
-                  <div class="cards__wrapper__container">
+                  <div class="cards-wrapper__container">
                     <p class="cards__info">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
@@ -251,12 +352,21 @@
               <a href="" class="cards__link">
                 <div class="cards__wrapper">
                   <img
-                    src="./images/portfolio/08.jpg"
+                    srcset="
+                      ./images/project-7-mobile.jpg     450w,
+                      ./images/project-7-mobile@2x.jpg  900w,
+                      ./images/project-7-tablet.jpg     354w,
+                      ./images/project-7-tablet@2x.jpg  708w,
+                      ./images/project-7-desktop.jpg    370w,
+                      ./images/project-7-desktop@2x.jpg 740w
+                    "
+                    sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (min-width: 480px) 450px,(max-width: 424px) 354px, 100vw"
+                    src="./images/project-7-mobile.jpg"
                     alt="Проєкт LAB"
                     width="370"
                   />
 
-                  <div class="cards__wrapper__container">
+                  <div class="cards-wrapper__container">
                     <p class="cards__info">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
@@ -275,12 +385,23 @@
               <a href="" class="cards__link">
                 <div class="cards__wrapper">
                   <img
-                    src="./images/portfolio/09.jpg"
+                    srcset="
+                      ./images/project-8-mobile.jpg     450w,
+                      ./images/project-8-mobile@2x.jpg  900w,
+                      ./images/project-8-tablet.jpg     354w,
+                      ./images/project-8-tablet@2x.jpg  708w,
+                      ./images/project-8-desktop.jpg    370w,
+                      ./images/project-8-desktop@2x.jpg 740w
+                    "
+                    sizes="(min-width:
+                  1200px) 370px, (min-width: 768px) 354px, (min-width: 480px)
+                  450px,(max-width: 424px) 354px, 100vw"
+                    src="./images/project-8-mobile.jpg"
                     alt="Growing Business"
                     width="370"
                   />
 
-                  <div class="cards__wrapper__container">
+                  <div class="cards-wrapper__container">
                     <p class="cards__info">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
                       функціоналу та сервісів. Все це дозволить відвідувачу
@@ -385,5 +506,12 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
