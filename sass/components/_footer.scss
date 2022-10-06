@@ -80,11 +80,13 @@
   margin-top: 9px;
   margin-bottom: 9px;
 }
+
 .footer__socials {
-  margin-bottom: 60px;
+  margin: 60px 0;
 
   @media screen and (min-width: 1200px) {
     margin-bottom: 0;
+    margin-left: 70px;
   }
 }
 
@@ -105,16 +107,14 @@
   }
 }
 
-.footer__social {
-  margin: 20px 0;
-  @media screen and (min-width: 1200px) {
-    margin-left: 70px;
-  }
-}
-
 .footer-socials__list {
   display: flex;
   gap: 10px;
+}
+
+.footer-socials__item {
+  width: 44px;
+  height: 44px;
 }
 
 .footer-socials__link {

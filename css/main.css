@@ -895,11 +895,12 @@ body {
 }
 
 .footer__socials {
-  margin-bottom: 60px;
+  margin: 60px 0;
 }
 @media screen and (min-width: 1200px) {
   .footer__socials {
     margin-bottom: 0;
+    margin-left: 70px;
   }
 }
 
@@ -920,18 +921,14 @@ body {
   }
 }
 
-.footer__social {
-  margin: 20px 0;
-}
-@media screen and (min-width: 1200px) {
-  .footer__social {
-    margin-left: 70px;
-  }
-}
-
 .footer-socials__list {
   display: flex;
   gap: 10px;
+}
+
+.footer-socials__item {
+  width: 44px;
+  height: 44px;
 }
 
 .footer-socials__link {
