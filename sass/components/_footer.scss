@@ -80,6 +80,13 @@
   margin-top: 9px;
   margin-bottom: 9px;
 }
+.footer__socials {
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+}
 
 .footer-socials__title {
   margin-bottom: 20px;
@@ -99,15 +106,18 @@
 }
 
 .footer__social {
-  margin-left: 70px;
+  margin: 20px 0;
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 
-.card__links-list-footer {
+.footer-socials__list {
   display: flex;
   gap: 10px;
 }
 
-.card__link-footer {
+.footer-socials__link {
   display: flex;
   justify-content: center;
   align-items: center;
