@@ -855,10 +855,22 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin-left: 46px;
+}
+@media screen and (min-width: 768px) {
+  .logo-bsmt {
+    margin-left: 0;
+  }
 }
 
 .logo__footer {
   color: var(--footer-color-text-secondary);
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .logo__footer {
+    text-align: left;
+  }
 }
 
 .bstm-list {
