@@ -839,6 +839,15 @@ body {
   }
 }
 
+.footer__list {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__list {
+    text-align: left;
+  }
+}
+
 .logo-bsmt {
   color: var(--text-color-accent);
   font-family: "Raleway";

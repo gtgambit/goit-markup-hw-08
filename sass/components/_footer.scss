@@ -24,6 +24,15 @@
     align-items: baseline;
   }
 }
+.footer-sub__wrap {
+}
+
+.footer__list {
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+}
 
 .logo-bsmt {
   color: var(--text-color-accent);
