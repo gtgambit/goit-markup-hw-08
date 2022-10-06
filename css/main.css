@@ -1055,6 +1055,24 @@ body {
   margin-left: 10px;
 }
 
+.form-subscription form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .form-subscription form {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form-subscription form {
+    flex-direction: row;
+    gap: 12px;
+  }
+}
+
 .backdrop {
   z-index: 100;
   position: fixed;
