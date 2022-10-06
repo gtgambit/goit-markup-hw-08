@@ -2,6 +2,7 @@
   background-color: var(--footer-bg-color);
   padding: 60px 0px;
 }
+
 .footer__wrapper {
   display: flex;
   flex-direction: column;
@@ -95,6 +96,10 @@
   @media screen and (min-width: 1200px) {
     text-align: start;
   }
+}
+
+.footer__social {
+  margin-left: 70px;
 }
 
 .card__links-list-footer {

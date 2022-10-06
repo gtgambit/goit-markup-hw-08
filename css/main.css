@@ -911,6 +911,10 @@ body {
   }
 }
 
+.footer__social {
+  margin-left: 70px;
+}
+
 .card__links-list-footer {
   display: flex;
   gap: 10px;
